@@ -2,10 +2,15 @@ import java.lang.Math;
 public class GeometricPoint {
     private double X;
     private double Y;
-    public GeometricPoint( double InitX, double InitY){
+    private String name;
+    public GeometricPoint( double InitX, double InitY, String Name){
         X= InitX;
         Y= InitY;
-    }  
+        name= Name;
+    }
+    public String getname(){
+        return name;
+    }
     public double getX(){
         return X;
     }
