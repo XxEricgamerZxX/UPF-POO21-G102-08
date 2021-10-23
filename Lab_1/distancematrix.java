@@ -2,11 +2,11 @@ import java.util.LinkedList;
 
 public class distancematrix {
     private LinkedList<GeometricPoint> cities;
-    private LinkedList<LinkedList<Double>> matrix;
+    private double[][] matrix;
 
     public distancematrix() {
         cities = new LinkedList<GeometricPoint>();
-        matrix = new LinkedList<LinkedList<Double>>();
+        matrix = new double [0][0];
     }
     public void addCity(double InitX, double InitY, String Name){
         GeometricPoint P = new GeometricPoint(InitX, InitY, Name);
@@ -21,12 +21,12 @@ public class distancematrix {
     }
     public void createDistanceMatrix(){
         int length = cities.size();
-        for(int i = 0; i < length; i++) {
-            List<Integer> list = new LinkedList<Integer>();
-            for(int j = 0; j < length; j++) {
-                list.add(0);
-            }
-            matrix.add(list);
-        }
+        matrix = new double[length][length];
+        
     }
+    public double getDistance( int index1 , int index2 ){
+        matrix[index1][index2] = cities.get(index1).distance(cities.get(index2));
+        return matrix[index1][index2];
+    }
+
 }
