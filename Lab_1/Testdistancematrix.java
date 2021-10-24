@@ -11,8 +11,28 @@ public class Testdistancematrix {
         matrix.addCity(Point2.getX(),Point2.getY(),Point2.getname());
         matrix.addCity(Point3.getX(),Point3.getY(),Point3.getname());
         matrix.addCity(Point4.getX(),Point4.getY(),Point4.getname());
-        matrix.createDistanceMatrix();
-        System.out.println(matrix.getDistance(1,3));
 
+        matrix.createDistanceMatrix();
+
+        System.out.println(matrix.getCityName(1));
+        System.out.println(matrix.getNoOfCities());
+
+        for(int i=0;i<matrix.getNoOfCities();i++){
+            for(int j=0;j<matrix.getNoOfCities();j++){
+                System.out.println(matrix.getDistance(i,j));
+            }
+        }
+        /* *
+        System.out.println(matrix.getDistance(0,0));
+        System.out.println(matrix.getDistance(0,1));
+        System.out.println(matrix.getDistance(0,2));
+        System.out.println(matrix.getDistance(0,3));
+        System.out.println(matrix.getDistance(1,1));
+        System.out.println(matrix.getDistance(1,2));
+        System.out.println(matrix.getDistance(1,3));
+        System.out.println(matrix.getDistance(2,2));
+        System.out.println(matrix.getDistance(2,3));
+        System.out.println(matrix.getDistance(3,3));
+        /** */
     }
 }
