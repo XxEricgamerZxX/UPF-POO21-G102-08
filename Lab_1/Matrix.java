@@ -1,6 +1,4 @@
 
-package distancematrix;
-
 public interface Matrix {
 	public void addCity( double x, double y, String name );
 	public String getCityName( int index );
