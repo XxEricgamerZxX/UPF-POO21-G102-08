@@ -38,11 +38,3 @@ public class Testdistancematrix {
         /** */
     }
 }
-
-/* *
-for(int i=0;i<length;i++){
-    for(int j=0;j<length;j++){
-        matrix[i][j]= this.getDistance(i,j);
-    }
-}
-/** */
