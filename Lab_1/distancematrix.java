@@ -34,7 +34,7 @@ public class distancematrix implements Matrix{
     public double getDistance( int index1 , int index2 ){
         matrix[index1][index2] = cities.get(index1).distance(cities.get(index2));
         double Distance= matrix[index1][index2];
-        System.out.println("The Distance between " + cities.get(index1).getname() + " and " + cities.get(index2).getname() + " is: " + Distance);
+        System.out.println("The Distance between the city " + cities.get(index1).getname() + " and the city" + cities.get(index2).getname() + " is: " + Distance);
         return Distance;
     }
 
