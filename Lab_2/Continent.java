@@ -13,7 +13,7 @@ public class Continent {
         
         double area_countries = 0.0;
 
-        for(int i = 0; i < countries.size()-1; i++){
+        for(int i = 0; i < countries.size(); i++){
             area_countries += countries.get(i).getArea(); 
         }
         return area_countries;
