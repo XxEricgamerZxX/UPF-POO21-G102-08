@@ -1,6 +1,7 @@
 import java.util.LinkedList;
 
 public class MyMap extends javax.swing.JPanel {
+<<<<<<< HEAD
     
     private World myWorld ;
 
@@ -116,6 +117,31 @@ public class MyMap extends javax.swing.JPanel {
 
         myWorld = new World( Mimundo );
        
+=======
+    private PolygonalRegion region;
+    private PolygonalRegion region1;
+    public MyMap() {
+        initComponents();
+        LinkedList< Point > points = new LinkedList< Point >();
+        points.add( new Point( 10, 100 ) );
+        points.add( new Point( 150, 10 ) );
+        points.add( new Point( 290, 100 ) );
+        points.add( new Point( 290, 200 ) );
+        points.add( new Point( 150, 290 ) );
+        points.add( new Point( 10, 200 ) );
+
+
+        LinkedList< Point > points1 = new LinkedList< Point >();
+        points1.add( new Point( 560, 100 ) );
+        points1.add( new Point( 460, 40 ) );
+        points1.add( new Point( 380, 100 ) );
+        points1.add( new Point( 380, 200 ) );
+        points1.add( new Point( 460, 260 ) );
+        points1.add( new Point( 560, 200 ) );
+
+        region = new PolygonalRegion( points );
+        region1 = new PolygonalRegion( points1 );
+>>>>>>> 317a957cd03baa0cab6ed06581c691fc35246306
     }
 
     private void initComponents() {
@@ -133,7 +159,14 @@ public class MyMap extends javax.swing.JPanel {
 
     public void paint( java.awt.Graphics g ) {
         super.paint( g );
+<<<<<<< HEAD
         myWorld.drawWorld(g);
+=======
+        region.draw( g );
+        region1.draw( g );
+        
+        
+>>>>>>> 317a957cd03baa0cab6ed06581c691fc35246306
     }
 
 }

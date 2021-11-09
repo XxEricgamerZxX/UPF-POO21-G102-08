@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import java.util.*;
 import java.awt.*;
 
@@ -23,3 +24,22 @@ public class World{
         }
     }
 }
+=======
+import java.util.LinkedList;
+import java.awt.Graphics;
+
+public class World {
+    private LinkedList <PolygonalRegion> continents;
+    public World(LinkedList<PolygonalRegion> polygonal_list){
+        this.continents = polygonal_list;
+    }
+    public void draw(Graphics G){
+
+        for(int i=0; i< continents.size(); i++){
+            (continents.get(i)).draw(G);
+            
+        }
+
+    }
+}
+>>>>>>> 317a957cd03baa0cab6ed06581c691fc35246306
