@@ -1,5 +1,5 @@
 import java.util.LinkedList;
-
+/*
 public class MyMap extends javax.swing.JPanel {
     
     private World myWorld ;
@@ -137,4 +137,63 @@ public class MyMap extends javax.swing.JPanel {
     }
 
 }
+*/
 
+public class MyMap extends javax.swing.JPanel {
+    private PolygonalRegion region1;
+    private PolygonalRegion region2;
+    private Continent continent ;
+
+    public MyMap() {
+        initComponents();
+
+        LinkedList< Point > points1 = new LinkedList< Point >();
+        LinkedList< Point > points2 = new LinkedList< Point >();
+
+        points1.add( new Point( 10, 100 ) );
+        points1.add( new Point( 150, 10 ) );
+        points1.add( new Point( 290, 100 ) );
+        points1.add( new Point( 290, 200 ) );
+        points1.add( new Point( 150, 290 ) );
+        points1.add( new Point( 10, 200 ) );
+
+        points2.add( new Point( 300, 300 ) );
+        points2.add( new Point( 400, 300 ) );
+        points2.add( new Point( 400, 400 ) );
+        points2.add( new Point( 300, 400 ) );
+    
+
+        region1 = new PolygonalRegion( points1 );
+        region2 = new PolygonalRegion( points2 );
+
+        LinkedList <PolygonalRegion> country = new LinkedList< PolygonalRegion>();
+        
+        country.add(region1);
+        country.add(region2);
+        
+
+        continent = new Continent(country);
+
+        System.out.println( continent.getTotalArea());
+       
+    }
+
+    private void initComponents() {
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1000, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1000, Short.MAX_VALUE)
+        );
+    }
+
+    public void paint( java.awt.Graphics g ) {
+        super.paint( g );
+        continent.drawPolygonal(g);
+    }
+
+}
