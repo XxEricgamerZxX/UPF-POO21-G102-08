@@ -2,7 +2,7 @@ import java.util.LinkedList;
 import java.awt.*;
 
 public class PolygonalRegion {
-    private LinkedList<Point> Points= new LinkedList<Point>();;
+    private LinkedList<Point> Points= new LinkedList<Point>();
 
     public PolygonalRegion(LinkedList<Point> Puntos){ 
         this.Points= Puntos;
