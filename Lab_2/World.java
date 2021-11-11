@@ -1,6 +1,7 @@
 import java.util.*;
 import java.awt.*;
 
+//Class World
 public class World{
 
     private LinkedList<Continent> continents = new LinkedList<Continent>();;
