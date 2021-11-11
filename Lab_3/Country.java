@@ -8,5 +8,5 @@ public class Country {
     public void Country(LinkedList<Point> Puntos,City cap){
         this.Capital=cap; 
     }
-    
+
 }
