@@ -19,13 +19,12 @@ public class Continent {
         return area_countries;
     }
 
-   public void drawPolygonal(Graphics G){
-
-        for(int i=0; i< countries.size(); i++){
-            (countries.get(i)).draw(G);
+    public void drawAll (Graphics g ) {
+        for ( int i = 0; i < countries.size(); i++) {
+            (countries.get(i)).drawRegion(g);
+            (countries.get(i)).drawCountry(g);
         }
-
-    } 
+    }
    
 }
 
