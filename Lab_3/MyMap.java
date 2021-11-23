@@ -70,7 +70,7 @@ public class MyMap extends javax.swing.JPanel {
         points10.add(new Point(80,120) );
         points10.add(new Point(440,680) );
 
-        PolygonalRegion region1 = new PolygonalRegion( points1 );
+        Country region1 = new Country( points1 );
         PolygonalRegion region2 = new PolygonalRegion( points2 );
         PolygonalRegion region3 = new PolygonalRegion( points3 );
         PolygonalRegion region4 = new PolygonalRegion( points4 );
