@@ -1,12 +1,13 @@
 import java.util.LinkedList;
 import java.awt.*;
 
-public class PolygonalRegion {
-    private LinkedList<Point> Points= new LinkedList<Point>();
+public class PolygonalRegion extends Region {
+    public LinkedList<Point> Points= new LinkedList<Point>();
 
     public PolygonalRegion(LinkedList<Point> Puntos){ 
         this.Points= Puntos;
     }
+
     public double getArea(){
         double area= 0.0;
         int length = Points.size();
@@ -19,7 +20,6 @@ public class PolygonalRegion {
     }
 
     public void draw( Graphics G){
-
         int x[] = new int[Points.size()];
         int y[] = new int[Points.size()];
         int index = 0;
@@ -31,6 +31,7 @@ public class PolygonalRegion {
         } 
         
         G.drawPolygon(x,y,index);
-        
+    
     }
+
 }
