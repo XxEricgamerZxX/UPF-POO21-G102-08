@@ -4,7 +4,7 @@ import java.awt.Graphics;
 public class Country extends PolygonalRegion {
 
     private String name;
-    private LinkedList<City> Cities ;
+    private LinkedList<City> Cities = new LinkedList<City>();
     private Country neighbors [] ; 
     private City Capital;
 
@@ -19,11 +19,10 @@ public class Country extends PolygonalRegion {
         return name;
     }
 
-    public City getCapital() {
-
-        return Capital;
+    public String getCapital() {
+        return Capital.getName();
     }
-
+    
     public void addCity(City c){
         Cities.add(c);
     }
