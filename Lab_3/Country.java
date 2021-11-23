@@ -8,16 +8,26 @@ public class Country extends PolygonalRegion {
     private Country neighbors [] ; 
     private City Capital;
 
-    public Country( LinkedList<Point> Puntos){
+    public Country(String name, LinkedList<Point> Puntos, City cap){
         super(Puntos);
-        
+        this.Capital=cap;
+        this.name= name;
+
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public City getCapital() {
+
+        return Capital;
     }
 
     public void addCity(City c){
-        int size=0;
-        Cities[size]=c;
-        size = size + 1;
+        Cities.add(c);
     }
+
     public void addneighbor( Country country){
         int size=0;
         neighbors[size]=country;
@@ -26,7 +36,11 @@ public class Country extends PolygonalRegion {
 
     public void drawCountry( Graphics g) {
         for ( int i = 0; i < Cities.size(); i++) {
-            (this.Cities.get(i)).drawCity( g, (this.Cities.get(i)).getX(), (this.Cities.get(i)).getY());
+            boolean isCapital = false;
+            if ( (Cities.get(i)).getName() == Capital.getName() ) {
+                isCapital = true;
+            }
+            (Cities.get(i)).drawCity( g, (int)(Cities.get(i)).getX(), (int)(Cities.get(i)).getY(), isCapital );
         }
     }
 }
