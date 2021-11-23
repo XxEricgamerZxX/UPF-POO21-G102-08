@@ -19,7 +19,7 @@ public class World{
     }
     public void drawWorld(Graphics g){
         for(int i=0; i< this.continents.size(); i++){
-            (this.continents.get(i)).drawPolygonal(g);
+            (this.continents.get(i)).drawAll(g);
         }
     }
 }
