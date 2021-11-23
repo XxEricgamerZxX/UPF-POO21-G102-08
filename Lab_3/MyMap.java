@@ -70,7 +70,8 @@ public class MyMap extends javax.swing.JPanel {
         points10.add(new Point(80,120) );
         points10.add(new Point(440,680) );
 
-        Country region1 = new Country( points1 );
+        //Country region1 = new Country( points1 );
+        PolygonalRegion region1 = new PolygonalRegion( points1 );
         PolygonalRegion region2 = new PolygonalRegion( points2 );
         PolygonalRegion region3 = new PolygonalRegion( points3 );
         PolygonalRegion region4 = new PolygonalRegion( points4 );
@@ -89,7 +90,7 @@ public class MyMap extends javax.swing.JPanel {
         country2.add(region3);
         country2.add(region4);
 
-        LinkedList <PolygonalRegion> country3 = new LinkedList< PolygonalRegion>();
+        LinkedList <Country> country3 = new LinkedList< Country>();
         country3.add(region5);
         country3.add(region6);
 
