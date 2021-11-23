@@ -3,10 +3,10 @@ import java.util.LinkedList;
 import java.awt.Graphics;
 
 public class Continent {
-    private LinkedList <PolygonalRegion> countries;
+    private LinkedList <Country> countries;
 
-    public Continent(LinkedList<PolygonalRegion> polygonal_list){
-        this.countries = polygonal_list;
+    public Continent(LinkedList<Country> Country_list){
+        this.countries = Country_list;
     }
 
     public double getTotalArea(){
@@ -19,13 +19,13 @@ public class Continent {
         return area_countries;
     }
 
-    public void drawPolygonal(Graphics G){
+   public void drawPolygonal(Graphics G){
 
         for(int i=0; i< countries.size(); i++){
             (countries.get(i)).draw(G);
         }
 
-    }
+    } 
    
 }
 
