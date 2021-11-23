@@ -1,4 +1,6 @@
+import java.awt.*;
+
 public abstract class Region {
-    public abstract double getArea();
-    public abstract double draw();
+    abstract double getArea();
+    abstract void draw(Graphics G );
 }
