@@ -19,7 +19,7 @@ public class PolygonalRegion extends Region {
         return area;
     }
 
-    public void draw( Graphics G){
+    public  void drawRegion( Graphics G){
         int x[] = new int[Points.size()];
         int y[] = new int[Points.size()];
         int index = 0;
@@ -29,8 +29,11 @@ public class PolygonalRegion extends Region {
             y[i] = (int) (Points.get(i).getY());
             index += 1;
         } 
+        G.setColor(Color.white);
+        G.fillPolygon( x, y,index );
+        G.setColor(Color.yellow);
+        G.drawPolygon( x, y, index );
         
-        G.drawPolygon(x,y,index);
     
     }
 
