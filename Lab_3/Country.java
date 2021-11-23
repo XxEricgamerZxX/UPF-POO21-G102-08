@@ -1,14 +1,16 @@
 import java.util.LinkedList;
 import java.awt.Graphics;
-public class Country {
+
+public class Country extends PolygonalRegion {
 
     private String name;
-    private City Cities [] ;
+    private LinkedList<City> Cities ;
     private Country neighbors [] ; 
     private City Capital;
 
-    public void Country( LinkedList<Point> Puntos,City cap){
-        this.Capital=cap; 
+    public Country( LinkedList<Point> Puntos){
+        super(Puntos);
+        
     }
 
     public void addCity(City c){
@@ -22,11 +24,9 @@ public class Country {
 		size = size + 1;
     }
 
-    public void drawCountry(Graphics G){
-
-        for(int i=0; i< countries.size(); i++){
-            (countries.get(i)).draw(G);
+    public void drawCountry( Graphics g) {
+        for ( int i = 0; i < Cities.size(); i++) {
+            (this.Cities.get(i)).drawCity( g, (this.Cities.get(i)).getX(), (this.Cities.get(i)).getY());
         }
-
     }
 }
