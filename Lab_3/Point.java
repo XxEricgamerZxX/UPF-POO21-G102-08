@@ -1,6 +1,6 @@
 public class Point {
-    private double X;
-    private double Y;
+    protected double X;
+    protected double Y;
 
     public Point(double InitX,double InitY){
         X= InitX;
