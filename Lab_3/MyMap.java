@@ -8,20 +8,20 @@ public class MyMap extends javax.swing.JPanel {
         initComponents();
         City city1 = new City( 150.0, 200.0, 100 ,"Madrid");
         City city2 = new City( 150.0, 100.0, 50, "BCN" );
-        City city3 = new City( 250.0, 320.0, 500,"Sevilla"  );
-        City city4 = new City( 260.0, 80.0, 500 , "Malaga" );
-        City city5 = new City( 430.0, 200.0,700 , "Cadiz" );
+        City city3 = new City( 200.0, 310.0, 500,"Sevilla"  );
+        City city4 = new City( 290.0, 160.0, 500 , "Malaga" );
+        City city5 = new City( 430.0, 310.0,700 , "Cadiz" );
         City city6 = new City( 710.0, 340.0,50 ,  "Zgz");
         City city7 = new City( 710.0, 290.0, 613, "Teruel" );
         City city8 = new City( 859.0, 480.0, 70,  "Mallorca");
-        City city9 = new City( 850.0, 340.0, 1000, "Vic" );
-        City city10 = new City( 740.0, 670.0, 400, "Vigo" );
-        City city11 = new City( 650.0, 680.0, 900, "Huesca" );
+        City city9 = new City( 460.0, 660.0,1000, "Vic" );
+        City city10 = new City( 720.0, 610.0, 900, "Vigo" );
+        City city11 = new City( 620.0, 600.0, 400, "Huesca" );
         City city12 = new City( 600.0, 670.0, 800, "Cuenca" );
-        City city13 = new City( 830.0, 690.0, 600,  "Olot");
-        City city14 = new City( 855.0, 690.0, 800,  "Leon");
-        City city15 = new City( 210.0, 685.0, 700,  "Bilbao");
-        City city16 = new City( 150.0, 670.0,500 ,  "Pals");
+        City city13 = new City( 300.0, 600.0, 600,  "Olot");
+        City city14 = new City( 330.0, 590.0, 800,  "Leon");
+        City city15 = new City( 60.0, 330.0, 700,  "Bilbao");
+        City city16 = new City( 60.0, 360.0,500 ,  "Pals");
         
         // REG 1
         LinkedList< Point > points1 = new LinkedList< Point >();    
@@ -47,22 +47,24 @@ public class MyMap extends javax.swing.JPanel {
 
         Country reg2 = new Country( "France", points2, city3);
         reg2.addCity(city3);
-
+ 
         LinkedList< Point > points3 = new LinkedList< Point >();   
-        points3.add(new Point(200.0,40.0) );
-        points3.add(new Point(470.0,350.0) );
-        points3.add(new Point(390.0,110.0) );
+        
+        points3.add( new Point( 290.0, 100.0 ) );
+        points3.add( new Point( 409.0, 10.0 ) );
+        points3.add( new Point( 549.0, 100.0  ) );
+        points3.add( new Point( 549.0, 200.0 ) );
+        points3.add( new Point( 420.0 ,290.0 ) );
+        points3.add( new Point( 290.0, 200.0  ) );
 
         Country reg3 = new Country( "Portugal", points3, city4);
         reg3.addCity(city4);
 
         LinkedList< Point > points4 = new LinkedList< Point >();    
-        points4.add( new Point( 290.0, 100.0  ) );
-        points4.add( new Point( 290.0, 200.0  ) );
-        points4.add( new Point( 430.0, 290.0 ) );
-        points4.add( new Point( 430.0, 390.0 ) );
-        points4.add( new Point( 570.0, 290.0  ) );
-        points4.add( new Point( 570.0, 200.0  ) );
+        points4.add( new Point( 549.0, 200.0  ) );
+        points4.add( new Point( 420.0, 290.0  ) );
+        points4.add( new Point( 360.0, 440.0 ) );
+        
         
 
         Country reg4 = new Country( "Germany", points4, city5 );
@@ -70,11 +72,11 @@ public class MyMap extends javax.swing.JPanel {
 
         //REG 5
         LinkedList< Point > points5 = new LinkedList< Point >();    
-        points5.add( new Point( 570.0, 200.0  ) );
-        points5.add( new Point( 570.0, 290.0  ) );
+        points5.add( new Point( 549.0, 200.0  ) );
+        points5.add( new Point( 360.0, 440.0 ) );
         points5.add( new Point( 710.0, 480.0  ) );
         points5.add( new Point( 850.0, 290.0  ) );
-        points5.add( new Point( 710.0, 200.0  ) );
+        points5.add( new Point( 850.0, 290.0  ) );
         points5.add( new Point( 710.0, 100.0 ) );
         
 
@@ -95,27 +97,31 @@ public class MyMap extends javax.swing.JPanel {
 
         LinkedList< Point > points7 = new LinkedList< Point >();    
         points7.add( new Point( 570.0, 580.0  ) );
-        points7.add( new Point( 570.0, 670.0  ) );
-        points7.add( new Point( 430.0, 770.0  ) );
-        points7.add( new Point( 710.0, 670.0 ) );
+        points7.add( new Point( 540.0, 670.0  ) );
+        points7.add( new Point( 430.0, 670.0  ) );
+        points7.add( new Point( 430.0, 580.0 ) );
+        points7.add( new Point( 470.0, 480.0  ) );
 
 
         Country reg7 = new Country( "Denmark", points7, city9);
         reg7.addCity(city9);
         
         LinkedList< Point > points8 = new LinkedList< Point >();    
-        points8.add( new Point( 710.0, 700.0  ) );
-        points8.add( new Point( 710.0, 670.0 ) );
-        points8.add( new Point( 850.0, 620.0 ) );
+        points8.add( new Point( 710.0, 570.0  ) );
+        points8.add( new Point( 710.0, 660.0 ) );
+        points8.add( new Point( 850.0, 640.0 ) );
 
 
         Country reg8 = new Country( "Italy", points8, city10 );
         reg8.addCity(city10);
 
-        LinkedList< Point > points9 = new LinkedList< Point >();   
-        points9.add( new Point( 710.0, 770.0  ) );
-        points9.add( new Point( 850.0, 670.0 ) );
-        points9.add( new Point( 990.0, 770.0  ) );
+        LinkedList< Point > points9 = new LinkedList< Point >(); 
+        points9.add( new Point( 570.0, 580.0  ) );
+        points9.add( new Point( 540.0, 670.0  ) );
+        points9.add( new Point( 710.0, 700.0  ) );
+        points9.add( new Point( 710.0, 570.0 ) );
+        
+        
 
 
         Country reg9 = new Country( "Sweden", points9, city12);
@@ -123,10 +129,10 @@ public class MyMap extends javax.swing.JPanel {
         reg9.addCity(city12);
 
         LinkedList< Point > points10 = new LinkedList< Point >();   
-        points10.add( new Point( 430.0, 860.0 ) );
-        points10.add( new Point( 570.0, 960.0  ) );
-        points10.add( new Point( 710.0, 960.0  ) );
-        points10.add( new Point( 570.0, 860.0  ) );
+        points10.add( new Point( 430.0, 670.0 ) );
+        points10.add( new Point( 430.0, 569.0  ) );
+        points10.add( new Point( 170.0, 580.0  ) );
+        points10.add( new Point( 140.0, 690.0  ) );
 
 
         Country reg10 = new Country( "Luxemb", points10, city14 );
@@ -134,14 +140,14 @@ public class MyMap extends javax.swing.JPanel {
         reg10.addCity(city14);
 
         LinkedList< Point > points11 = new LinkedList< Point >();    
-        points11.add( new Point( 10.0, 580.0  ) );
-        points11.add( new Point( 10.0, 670.0 ) );
-        points11.add( new Point( 150.0, 770.0  ) );
-        points11.add( new Point( 430.0, 860.0 ) );
-        points11.add( new Point( 570.0, 860.0 ) );
-        points11.add( new Point( 710.0, 670.0 ) );
-        points11.add( new Point( 430.0, 770.0  ) );
-        points11.add( new Point( 150.0, 580.0  ) );
+        points11.add( new Point( 140.0, 490.0  ) );
+        points11.add( new Point( 150.0, 480.0 ) );
+        points11.add( new Point( 150.0, 330.0  ) );
+        points11.add( new Point( 140.0, 320.0 ) );
+        points11.add( new Point( 20.0, 320.0 ) );
+        points11.add( new Point( 10.0, 330.0 ) );
+        points11.add( new Point( 10.0, 480.0  ) );
+        points11.add( new Point( 20.0, 490.0  ) );
 
         
         Country reg11 = new Country( "Bulgaria", points11, city15);
