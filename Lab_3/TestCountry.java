@@ -16,10 +16,10 @@ public class TestCountry {
         LinkedList<Point> listCities2 = new LinkedList<Point>();
 
         
-        Country count1 = new Country( "Friend", listCities1, c1);
+        Country count1 = new Country( "Spain", listCities1, c1);
         count1.addCity(c1);
         count1.addCity(c2);
-        Country count2 = new Country( "Whale", listCities2, c3 );
+        Country count2 = new Country( "Portugal", listCities2, c3 );
         count2.addCity(c3);
         count2.addCity(c4);
 
