@@ -22,7 +22,7 @@ public class Country extends PolygonalRegion {
     public String getCapital() {
         return Capital.getName();
     }
-    
+
     public void addCity(City c){
         Cities.add(c);
     }
@@ -31,6 +31,14 @@ public class Country extends PolygonalRegion {
         int size=0;
         neighbors[size]=country;
 		size = size + 1;
+    }
+    public void printCities() {
+        System.out.println("List of Cities: ");
+        if ( this.Cities == null ) { System.out.println( "There are no cities." ); }
+        else for ( int i = 0; i < Cities.size(); i++) {
+            System.out.print((Cities.get(i)).getName() + ", ");
+        }
+        System.out.println("");
     }
 
     public void drawCountry( Graphics g) {
