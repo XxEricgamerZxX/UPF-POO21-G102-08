@@ -18,9 +18,9 @@ public class MyMap extends javax.swing.JPanel {
         City city10 = new City( 830.0, 720.0, 900, "Vigo" );
         City city11 = new City( 800.0, 810.0, 400, "Huesca" );
         City city12 = new City( 600.0, 670.0, 800, "Cuenca" );
-        City city13 = new City( 570.0, 900.0, 600,  "Olot");
-        City city14 = new City( 570.0, 770.0, 800,  "Leon");
-        City city15 = new City( 290.0, 770.0, 700,  "Bilbao");
+        City city13 = new City( 830.0, 690.0, 600,  "Olot");
+        City city14 = new City( 855.0, 690.0, 800,  "Leon");
+        City city15 = new City( 210.0, 685.0, 700,  "Bilbao");
         City city16 = new City( 150.0, 670.0,500 ,  "Pals");
         
         // REG 1
