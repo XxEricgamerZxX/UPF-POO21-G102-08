@@ -14,12 +14,13 @@ public class City extends GeoPoint {
     public void drawCity(Graphics G, int X, int Y, boolean Capital){
         if ( Capital ) {
             
-            G.setColor(Color.red);
+            G.setColor(Color.yellow);
             G.fillOval( X, Y, 7, 7 );
             G.setColor(Color.blue);
             G.setFont(new Font("AvantGarde", Font.PLAIN | Font.BOLD, 10));
             G.drawString( name , X, Y );
-        } else {
+        } 
+        else {
             G.setColor(Color.green);
             G.fillOval( X, Y, 7, 7 );
             G.setColor(Color.blue);
