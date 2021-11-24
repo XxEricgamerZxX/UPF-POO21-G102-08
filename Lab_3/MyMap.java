@@ -8,15 +8,15 @@ public class MyMap extends javax.swing.JPanel {
         initComponents();
         City city1 = new City( 150.0, 200.0, 100 ,"Madrid");
         City city2 = new City( 150.0, 100.0, 50, "BCN" );
-        City city3 = new City( 180.0, 210.0, 500,"Sevilla"  );
+        City city3 = new City( 250.0, 320.0, 500,"Sevilla"  );
         City city4 = new City( 260.0, 80.0, 500 , "Malaga" );
         City city5 = new City( 430.0, 200.0,700 , "Cadiz" );
         City city6 = new City( 710.0, 340.0,50 ,  "Zgz");
         City city7 = new City( 710.0, 290.0, 613, "Teruel" );
         City city8 = new City( 859.0, 480.0, 70,  "Mallorca");
         City city9 = new City( 850.0, 340.0, 1000, "Vic" );
-        City city10 = new City( 830.0, 720.0, 900, "Vigo" );
-        City city11 = new City( 800.0, 810.0, 400, "Huesca" );
+        City city10 = new City( 740.0, 670.0, 400, "Vigo" );
+        City city11 = new City( 650.0, 680.0, 900, "Huesca" );
         City city12 = new City( 600.0, 670.0, 800, "Cuenca" );
         City city13 = new City( 830.0, 690.0, 600,  "Olot");
         City city14 = new City( 855.0, 690.0, 800,  "Leon");
@@ -41,9 +41,9 @@ public class MyMap extends javax.swing.JPanel {
         LinkedList< Point > points2 = new LinkedList< Point >();    
         points2.add( new Point( 150.0, 290.0 ) );
         points2.add( new Point( 290.0, 200.0  ) );
-        points2.add( new Point( 43.0, 290.0   ) );
-        points2.add( new Point( 290.0, 390.0 ) );
-        points2.add( new Point( 150.0, 390.0  ) );
+        points2.add( new Point( 420.0, 290.0   ) );
+        points2.add( new Point( 360.0, 440.0 ) );
+        points2.add( new Point( 220.0, 440.0  ) );
 
         Country reg2 = new Country( "France", points2, city3);
         reg2.addCity(city3);
@@ -104,9 +104,9 @@ public class MyMap extends javax.swing.JPanel {
         reg7.addCity(city9);
         
         LinkedList< Point > points8 = new LinkedList< Point >();    
-        points8.add( new Point( 710.0, 770.0  ) );
-        points8.add( new Point( 710.0, 860.0 ) );
-        points8.add( new Point( 850.0, 770.0 ) );
+        points8.add( new Point( 710.0, 700.0  ) );
+        points8.add( new Point( 710.0, 670.0 ) );
+        points8.add( new Point( 850.0, 620.0 ) );
 
 
         Country reg8 = new Country( "Italy", points8, city10 );
