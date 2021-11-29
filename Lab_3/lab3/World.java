@@ -1,8 +1,4 @@
-<<<<<<< HEAD:Lab_3/lab3/World.java
 package lab3;
-=======
-//Corrected
->>>>>>> e77252e685067b6ab8b628d7a5bd8d5cfb403357:Lab_3/World.java
 import java.util.*;
 import java.awt.*;
 
