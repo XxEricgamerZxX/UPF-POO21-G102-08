@@ -1,5 +1,6 @@
 package lab4;
-import java.awt.*;
+import java.util.*;
+import java.awt.Graphics;
 
 
 // remember we need to use abstract methods from Region
@@ -39,21 +40,22 @@ public class EllipsoidalRegion extends Region{
     }
 
     public boolean isSelected(Point Punto) {
-        // TODO Auto-generated method stub
+        
         return false;
     }
 
    
     public void draw(Graphics g) {
-        g.setColor( fillcolor );
+        //g.setColor( fillcolor );
+        g.setColor(fillcolor);
         g.fillOval( (int) this.c.getX(), (int) this.c.getY(), (int) r1, (int) r2 );
-        g.setColor( lineColor );
+        g.setColor(lineColor );
         g.drawOval((int) this.c.getX(), (int) this.c.getY(), (int) this.r1, (int) this.r2);
         
     }
 
-    public void translate(int dx, int dy) {
-        // TODO Auto-generated method stub
+    public void translate(Vector V) {
+        c.move(V.X, V.Y);
         
     }
-}
+}  
