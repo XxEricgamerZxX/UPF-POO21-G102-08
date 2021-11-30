@@ -20,15 +20,13 @@ public class Line extends Entity {
 
     
     public void draw(Graphics g) {
-        // TODO Auto-generated method stub
+        g.drawLine((int) Math.round(P1.getX()), (int) Math.round(P1.getY()), (int) Math.round(P2.getX()), (int) Math.round(P2.getY()));
         
     }
 
    
-    public void translate(int dx, int dy) {
-        /*
-        this.P1.getX() += (double)dx ;
-        */
+    public void translate(Vector V) {
+        P1.move(V.X , V.Y);
+        P2.move(V.X, V.Y);
     }
-    
 }
