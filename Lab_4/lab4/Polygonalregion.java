@@ -6,14 +6,13 @@ import java.awt.*;
 public class Polygonalregion extends Region {
     private LinkedList<Point> Points= new LinkedList<Point>();
 
-    public Polygonalregion(LinkedList<Point> Puntos){
-        super(); 
+    public Polygonalregion(Color lineColor, Color FillColor,LinkedList<Point> Puntos){
+        super(lineColor,FillColor); 
         this.Points= Puntos;
     }
 
 
-    @Override
-    double getArea() {
+    public double getArea() {
         double area= 0.0;
         int length = Points.size();
         
@@ -24,9 +23,9 @@ public class Polygonalregion extends Region {
         return area;
     }
 
-    @Override
+   
 
-    Boolean isPointinside(Point p) {
+    public Boolean isPointinside(Point p) {
         Boolean isInside = true;
         int length = Points.size();
         int count1= 0;
@@ -37,7 +36,7 @@ public class Polygonalregion extends Region {
             Vector V2 = Points.get(i).difference(p);
             double check = V1.productcheck(V2);
 
-            if (check >0.0){
+            if (check > 0.0){
                 count1 =+ 1 ;
             }
             else{
@@ -54,7 +53,7 @@ public class Polygonalregion extends Region {
         
     }
 
-    @Override
+   
     public boolean isSelected(Point Punto) {
         // TODO Auto-generated method stub
         return false;
