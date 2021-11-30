@@ -5,8 +5,8 @@ import java.awt.*;
 abstract public class Entity {
 	protected Color lineColor;
 
-	public Entity(Color InitColor ){
-		lineColor=InitColor;
+	public Entity(Color initlineC ){
+		lineColor=initlineC;
 	}
 	public Color getColor(){
 		return lineColor;
@@ -16,6 +16,6 @@ abstract public class Entity {
 	}
 	
 	abstract public void draw(Graphics g );
-	abstract public void translate( int dx, int dy );
-	
+	abstract public void translate( Vector V );
+	abstract public boolean isSelected(Point p);
 }
