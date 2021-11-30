@@ -13,11 +13,10 @@ public class TriangularRegion extends Polygonalregion {
         Puntos.add( p2 );
         Puntos.add( p3 );
     }
-    
-    public double getArea(){
-        
-        return super.getArea();
 
+    public double getArea(){
+    
+        return super.getArea();
     }
     
 }
