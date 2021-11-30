@@ -6,7 +6,7 @@ public class Vector extends Point {
         super(InitX,InitY);   
     }
     public double productcheck( Vector V2){
-        double cross = super.X * V2.X - super.Y * V2.Y;
+        double cross = super.Y * V2.X - super.X * V2.Y;
         return cross; 
     }
 }
