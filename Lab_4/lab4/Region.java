@@ -4,10 +4,13 @@ import java.awt.*;
 public abstract class Region extends Entity {
     protected Color fillcolor;
     
-    public Region(Color InitlineC, Color InitFill){
+    public Region(Color InitlineC, Color initFill){
         super(InitlineC);
-        fillcolor= InitFill;
+        fillcolor= initFill;
     }
+    public Color getFillColor(){
+		return fillcolor;
+	}
     public void setFillColor( Color InitFill){
         InitFill = fillcolor;
     }
@@ -15,6 +18,6 @@ public abstract class Region extends Entity {
     abstract public double getArea();
     abstract public void draw( Graphics g );
     abstract public Boolean isPointinside(Point p);
-    abstract public void translate( int dx, int dy );
+    
 
 }
