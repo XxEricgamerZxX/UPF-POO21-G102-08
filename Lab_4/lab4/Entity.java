@@ -5,7 +5,8 @@ import java.awt.*;
 abstract public class Entity {
 	protected Color lineColor;
 
-	public Entity( ){
+	public Entity(Color InitColor ){
+		lineColor=InitColor;
 	}
 	public Color getColor(){
 		return lineColor;
@@ -13,7 +14,7 @@ abstract public class Entity {
 	public void setColor( Color c){
 		this.lineColor= c;
 	}
-	abstract public boolean isSelected(Point Punto);
+	
 	abstract public void draw(Graphics g );
 	abstract public void translate( int dx, int dy );
 	
