@@ -21,7 +21,9 @@ public class DrawPanel extends JPanel {
 	}
 
 	public void translate( int dx, int dy ) {
+		Vector V;
 		for ( int i = 0; i < drawables.size(); ++i )
-			drawables.get( i ).translate( dx, dy );
+			drawables.get( i ).translate( V = new Vector(dx, dy));
+		
 	}
 }
