@@ -59,7 +59,7 @@ public class Polygonalregion extends Region {
         return false;
     }
 
-    @Override
+    
     public void draw(Graphics G) {
         int x[] = new int[Points.size()];
         int y[] = new int[Points.size()];
@@ -70,17 +70,22 @@ public class Polygonalregion extends Region {
             y[i] = (int) (Points.get(i).getY());
             index += 1;
         } 
-        G.setColor(Color.white);
+        G.setColor(java.awt.Color.white);
         G.fillPolygon( x, y,index );
-        G.setColor(Color.yellow);
+        G.setColor(java.awt.Color.yellow);
         G.drawPolygon( x, y, index );
         
     }
 
-    @Override
-    public void translate(int dx, int dy) {
-        // TODO Auto-generated method stub
-        
+
+    public void translate(Vector V) {
+        int length = Points.size();
+        Point P;
+
+        for (int i = 0; i < length; i++){
+            P = Points.get(i);
+            P.move(V.X, V.Y);
+        }
     }
     
 }
