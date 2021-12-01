@@ -4,30 +4,39 @@ import java.util.LinkedList;
 public class TestEntityDrawer {
     public static void main (String[] args){
         EntityDrawer drawables = new EntityDrawer(); 
-        Color lineC = new Color( 0.0,0.0,255.0, true );   //blue
-        Color fillC = new Color( 0.0,128.0,128.0, true );
+        HSV lineC = new HSV( 0,0,255 ); 
+        RGB fillC = new RGB( 0,140,128);
+        
+        //as the second valor is the saturation, we put 0 on liceC and 140 to the other to denote contrast
+        
             
-        LinkedList< Point > points1 = new LinkedList< Point >();    
-        points1.add( new Point( 10, 80 ) );
-        points1.add( new Point( 110, 10 ) );
-        points1.add( new Point( 210, 80 ) );
-        points1.add( new Point( 210, 140 ) );
-        points1.add( new Point( 110, 210 ) );
-        points1.add( new Point( 10, 140 ) );
-        
-        Polygonalregion polReg = new Polygonalregion(lineC,fillC,points1 );
+        LinkedList< Point > points2 = new LinkedList< Point >();
+            
+        points2.add( new Point( 150.0, 290.0 ) );
+        points2.add( new Point( 290.0, 200.0  ) );
+        points2.add( new Point( 420.0, 290.0  ) );
+        points2.add( new Point( 360.0, 440.0 ) );
+        points2.add( new Point( 220.0, 440.0  ) );
 
-        EllipsoidalRegion ellReg = new EllipsoidalRegion( lineC,fillC, new Point( 230, 230 ), 50, 60);
-        
-        CircularRegion cirReg = new CircularRegion( lineC,fillC,new Point( 110, 300 ), 40);
-        
-        TriangularRegion triReg = new TriangularRegion(  lineC,fillC,new Point( 310, 370 ), new Point( 410, 370 ), new Point( 360, 270 ));
+        Polygonalregion poligon = new Polygonalregion(lineC,fillC, points2 );
 
-        RectangularRegion recReg = new RectangularRegion( lineC,fillC,new Point( 280, 450 ), new Point( 380, 550 ));
-        drawables.addDrawable( polReg );
-        drawables.addDrawable( ellReg );
-        drawables.addDrawable( cirReg );
-        drawables.addDrawable( triReg );
-        drawables.addDrawable( recReg );
+        EllipsoidalRegion ellipsoid = new EllipsoidalRegion( lineC,fillC, new Point(400, 40 ), 80, 50);
+        
+        CircularRegion circle = new CircularRegion( lineC,fillC,new Point( 400, 90 ), 40);
+        
+        TriangularRegion triangle = new TriangularRegion(  lineC,fillC, new Point( 30, 370 ), new Point( 100, 370 ), new Point( 80, 270 ));
+
+        RectangularRegion rectangle = new RectangularRegion( lineC,fillC,new Point( 30, 10 ), new Point( 130, 170 ));
+
+        //Line linea= new Line(lineC,new Point( 220, 80 ), new Point( 270, 80 ));
+        //Text texto= new Text(lineC,new Point( 700, 400 ),"Hola como va");
+        
+        drawables.addDrawable( poligon );
+        drawables.addDrawable( ellipsoid );
+        drawables.addDrawable( circle );
+        drawables.addDrawable( triangle );
+        drawables.addDrawable( rectangle );
+        //drawables.addDrawable(linea);
+        //drawables.addDrawable(texto);
     }
 }

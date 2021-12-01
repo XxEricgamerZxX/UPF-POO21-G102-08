@@ -64,9 +64,9 @@ public class Polygonalregion extends Region {
             y[i] = (int) (Points.get(i).getY());
             index += 1;
         } 
-        G.setColor(super.getFillColor());
+        G.setColor(fillcolor);
         G.fillPolygon( x, y,index );
-        G.setColor(super.lineColor);
+        G.setColor(lineColor);
         G.drawPolygon( x, y, index );
         
     }
