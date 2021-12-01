@@ -26,8 +26,8 @@ public class Point {
         this.Y += disY;
     }
     public Vector difference( Point P2){
-        double Xdifference= P2.getX() - this.X ;
-        double Ydifference= P2.getY() - this.Y  ;
+        double Xdifference= this.X -P2.getX();
+        double Ydifference= this.Y- P2.getY();
 
         Vector v = new Vector(Xdifference,Ydifference) ;
         return v;

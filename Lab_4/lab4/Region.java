@@ -4,14 +4,14 @@ import java.awt.*;
 public abstract class Region extends Entity {
     protected Color fillcolor;
     
-    public Region(Color InitlineC, Color initFill){
-        super(InitlineC);
-        fillcolor= initFill;
+    public Region( Color InitilineColor, Color Initfillcolor){
+        super ( InitilineColor );
+        fillcolor = Initfillcolor;
     }
-    public Color getFillColor(){
+    public java.awt.Color getFillColor(){
 		return fillcolor;
 	}
-    public void setFillColor( Color InitFill){
+    public void setFillColor( java.awt.Color InitFill){
         InitFill = fillcolor;
     }
 

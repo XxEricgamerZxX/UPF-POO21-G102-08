@@ -9,8 +9,8 @@ public class EllipsoidalRegion extends Region{
     private double r1;
     private double r2;
 
-    public EllipsoidalRegion(Color InitlineC, Color InitFill, Point initC, double initR1, double initR2){
-        super(InitlineC,InitFill); 
+    public EllipsoidalRegion(Color InitilineColor, Color Initfillcolor,Point initC, double initR1, double initR2){
+        super(InitilineColor,Initfillcolor);
         this.c = initC;
         this.r1 = initR1;
         this.r2 = initR2;
@@ -40,8 +40,11 @@ public class EllipsoidalRegion extends Region{
     }
 
     public boolean isSelected(Point Punto) {
-        
-        return false;
+        if (isPointinside(Punto) == true){
+            return true;
+        } else{
+            return false;
+        }
     }
 
    

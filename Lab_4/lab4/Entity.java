@@ -5,8 +5,8 @@ import java.awt.*;
 abstract public class Entity {
 	protected Color lineColor;
 
-	public Entity(Color initlineC ){
-		lineColor=initlineC;
+	public Entity(Color InitlineColor ){
+		lineColor=InitlineColor;
 	}
 	public Color getColor(){
 		return lineColor;

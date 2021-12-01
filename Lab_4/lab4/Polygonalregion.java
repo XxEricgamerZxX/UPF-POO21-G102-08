@@ -6,8 +6,8 @@ import java.awt.*;
 public class Polygonalregion extends Region {
     private LinkedList<Point> Points= new LinkedList<Point>();
 
-    public Polygonalregion(Color lineColor, Color FillColor,LinkedList<Point> Puntos){
-        super(lineColor,FillColor); 
+    public Polygonalregion(Color InitilineColor, Color Initfillcolor,LinkedList<Point> Puntos){
+        super( InitilineColor, Initfillcolor);
         this.Points= Puntos;
     }
 
@@ -53,13 +53,7 @@ public class Polygonalregion extends Region {
         
     }
 
-   
-    public boolean isSelected(Point Punto) {
-        // TODO Auto-generated method stub
-        return false;
-    }
 
-    
     public void draw(Graphics G) {
         int x[] = new int[Points.size()];
         int y[] = new int[Points.size()];
@@ -70,9 +64,9 @@ public class Polygonalregion extends Region {
             y[i] = (int) (Points.get(i).getY());
             index += 1;
         } 
-        G.setColor(java.awt.Color.white);
+        G.setColor(super.getFillColor());
         G.fillPolygon( x, y,index );
-        G.setColor(java.awt.Color.yellow);
+        G.setColor(super.lineColor);
         G.drawPolygon( x, y, index );
         
     }
@@ -85,6 +79,15 @@ public class Polygonalregion extends Region {
         for (int i = 0; i < length; i++){
             P = Points.get(i);
             P.move(V.X, V.Y);
+        }
+    }
+
+
+    public boolean isSelected(Point p) {
+        if (isPointinside(p) == true){
+            return true;
+        } else{
+            return false;
         }
     }
     

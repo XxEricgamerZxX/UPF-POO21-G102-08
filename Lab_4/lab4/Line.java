@@ -6,8 +6,8 @@ public class Line extends Entity {
     private Point P1;
     private Point P2;
 
-    public Line( Color LineColor,Point initP1, Point initP2){
-        super(LineColor);
+    public Line(Color InitilineColor,Point initP1, Point initP2){
+        super((lab4.Color) InitilineColor);
         initP1=this.P1;
         initP2=this.P2;
     }

@@ -7,8 +7,8 @@ public class Text extends Entity {
     private Point c;
     private String text;
     
-    public Text(Point Initc, String initString, lab4.Color InitColor) {
-        super(InitColor);
+    public Text(Color InitilineColor,Point Initc, String initString) {
+        super( (lab4.Color) InitilineColor);
         c= Initc;
         text= initString;
     }
