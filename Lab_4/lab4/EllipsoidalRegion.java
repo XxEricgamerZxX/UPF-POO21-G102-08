@@ -27,7 +27,7 @@ public class EllipsoidalRegion extends Region{
     public Boolean isPointinside(Point p) {
         
         Boolean isInside = true;
-        double check = Math.pow(p.getX()-c.getX(),2)/r1 + Math.pow(p.getY()-c.getY(),2)/r2;
+        double check = (Math.pow(p.getX()-c.getX(),2)/r1) + (Math.pow(p.getY()-c.getY(),2)/r2);
         if ( check <= 1.0){
             return isInside;
         }

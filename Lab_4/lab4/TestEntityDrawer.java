@@ -21,8 +21,11 @@ public class TestEntityDrawer {
         Polygonalregion poligon = new Polygonalregion(lineC,fillC, points2 );
 
         EllipsoidalRegion ellipsoid = new EllipsoidalRegion( lineC,fillC, new Point(400, 40 ), 80, 50);
+
+        System.out.println(ellipsoid.isPointinside(new Point( 405, 45 )));
         
         CircularRegion circle = new CircularRegion( lineC,fillC,new Point( 400, 90 ), 40);
+        
         
         TriangularRegion triangle = new TriangularRegion(  lineC,fillC, new Point( 30, 370 ), new Point( 100, 370 ), new Point( 80, 270 ));
 
@@ -36,6 +39,7 @@ public class TestEntityDrawer {
         drawables.addDrawable( circle );
         drawables.addDrawable( triangle );
         drawables.addDrawable( rectangle );
+
         //drawables.addDrawable(linea);
         //drawables.addDrawable(texto);
     }
