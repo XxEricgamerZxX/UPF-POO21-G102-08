@@ -1,3 +1,4 @@
+//Graded
 package lab4;
 import java.awt.*;
 import javax.swing.*;
